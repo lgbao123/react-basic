@@ -13,6 +13,8 @@ class ChildComponent extends React.Component {
             <>
                 <div>
                     {name}-{age}
+                    <br />
+                    <br />
                 </div>
                 {/* Cach 1 
                 <div>
