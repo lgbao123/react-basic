@@ -6,6 +6,10 @@ class ChildComponent extends React.Component {
     handleShowHide = () => {
         this.setState({ show: !this.state.show });
     };
+    handleDeleteJob = (job) => {
+        this.props.deleteJob(job);
+        // console.log(this.props, 12312123);
+    };
     render() {
         let { name, age, jobList } = this.props;
         let { show } = this.state;
@@ -52,6 +56,13 @@ class ChildComponent extends React.Component {
                                     return (
                                         <div key={job.id}>
                                             {job.name} -{job.salary}
+                                            <span
+                                                onClick={() =>
+                                                    this.handleDeleteJob(job)
+                                                }
+                                            >
+                                                x
+                                            </span>
                                         </div>
                                     );
                                 })}

@@ -16,6 +16,10 @@ class AddComponent extends React.Component {
     };
     handleSubmit = (e) => {
         e.preventDefault();
+        if (!this.state.name || !this.state.salary) {
+            alert('Not null');
+            return;
+        }
         console.log('>>> Check state ', this.state);
         let job = {
             id: Math.random(),
