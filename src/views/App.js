@@ -1,16 +1,22 @@
 import logo from './logo.svg';
 import './App.scss';
 import TodoList from '../components/TodoList/TodoList.js';
-
+import Nav from '../components/Nav/Nav';
+import Home from '../components/Home/Home';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>Todo List </p>
-                <TodoList />
-            </header>
-        </div>
+        <BrowserRouter>
+            <div className="App">
+                <header className="App-header">
+                    <Nav />
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/todo" element={<TodoList />} />
+                    </Routes>
+                </header>
+            </div>
+        </BrowserRouter>
     );
 }
 
