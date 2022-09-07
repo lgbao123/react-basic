@@ -1,0 +1,20 @@
+.addTodo-container {
+    width: 400px;
+    margin: 0 auto 20px auto;
+
+    text-align: left;
+    label {
+        font-size: 24px;
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+    .input {
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        input {
+            flex: 1;
+        }
+    }
+}
