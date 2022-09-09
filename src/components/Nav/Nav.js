@@ -17,6 +17,12 @@ class Nav extends React.Component {
                 >
                     Todo
                 </NavLink>
+                <NavLink
+                    className={(navData) => (navData.isActive ? 'active' : '')}
+                    to="/user"
+                >
+                    Users
+                </NavLink>
             </div>
         );
     }

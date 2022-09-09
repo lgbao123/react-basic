@@ -1,0 +1,13 @@
+.UserList-container {
+    width: 400px;
+    // background-color: red;
+    margin: 56px auto 0 auto;
+    .content {
+        border: 1px solid grey;
+        padding: 16px;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
